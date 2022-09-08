@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT RECORDS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+    <div class="id1">
+        <h1 class="Login"> Student Records </h1> 
+    </div>
+    
+    <div class="id2">
+
+    <form id="form1" onsubmit="AddNew(); return false;" required>
+        <input type="text" id="Roll_No" placeholder="Roll No." required>       
+        <input type="text" id="Name" placeholder="Student Name" required>
+        <button type="submit" id="log">Add New</button>
+       
+    </form><br><br>
+</div class="id4">
+
+    <table border="1" id="StudentTable">
+        <tr class="t1">
+          <th>Roll No.</th>
+          <th>Student Name</th>
+        </tr>
+      </table>
+      <br>
+      <div class="id3">
+      <button type="submit" class="delete" onclick="deletefunction()">Delete Last Records</button><br><br>
+    </div>
+    
+    </div>
+</body>
+
+<script>
+    function AddNew() {
+        var tb1 = document.getElementById("StudentTable");
+        var row = tb1.insertRow();
+        var col1 = row.insertCell();
+        var col2 = row.insertCell();
+        col1.innerHTML = document.getElementById("Roll_No").value;
+        col2.innerHTML = document.getElementById("Name").value;
+        document.getElementById("form1").reset();
+    }
+    function deletefunction()
+    {
+        var t1 = document.getElementById("StudentTable");
+        t1.deleteRow(-1);
+    }
+</script>
+</html>
