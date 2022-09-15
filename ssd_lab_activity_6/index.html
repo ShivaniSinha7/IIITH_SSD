@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="cont1">
+            <h1><center> Team Form </center></h1>
+        </div>
+        <div class="cont1">
+            <div class="formdata">
+                <form id="myform" class="form1" onsubmit="alertfunction(this);" required>
+                    <div>
+                        <label for="name">Manager Name</label>&nbsp;&nbsp;&nbsp;
+                        <input type="text" id="name"><br><br>
+                    </div>
+                    
+                    <div>
+                        <label for="email">Group Email </label>&nbsp;&nbsp;&nbsp;
+                        <input type="email" id="email"><br><br>
+                    </div>
+                    
+                    <div>
+                        <label for="suser">Server Username</label>&nbsp;&nbsp;&nbsp;
+                        <input type="text" id="suser"><br><br>
+                    </div>
+                    
+                    <div>
+                        <label for="spass">Server Password </label>&nbsp;&nbsp;&nbsp;
+                        <input type="password" id="pass"><br><br>
+                    </div>
+                    
+                    <div>
+                        <label for="teamlead">Team Lead</label>&nbsp;&nbsp;&nbsp;
+                        <select name="teamlead" id="teamlead">
+                        <option value="">Aman</option>
+                        <option value="">Ajay</option>
+                        <option value="">Meena</option>
+                    </select>
+                    </div>
+
+                    <br><br>
+                    <div>
+                        <label for="teammember">Team Members </label>&nbsp;&nbsp;&nbsp;
+                        <div class="droptarget-div" id="div1">
+                            <p id="drag1" draggable="true" ondragstart="drag(event)">
+                            Vedashree
+                            </p>
+                            <p id="drag2" draggable="true" ondragstart="drag(event)">
+                            Sanya
+                            </p>
+                            <p id="drag3" draggable="true" ondragstart="drag(event)">
+                            Shivani
+                            </p>
+                            <p id="drag4" draggable="true" ondragstart="drag(event)">
+                            Priya
+                            </p>
+                            <p id="drag5" draggable="true" ondragstart="drag(event)">
+                            Yash
+                            </p>
+                        </div>
+                        <div class="droptarget-div" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+                    </div><br>
+                    
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
